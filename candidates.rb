@@ -43,11 +43,25 @@ def average_age (people)
     peeps = []
     people.map{ |person| peeps.push(person[:age]) }
 
-    puts peeps
+    puts "people ages #{peeps}"
+
+    total = peeps.reduce() { |sum, n| sum +n }
+
+    # puts total
+
+    average = total.to_f / people.length.to_f
+    
+    puts "Average Age: #{average}"
 
 end
 
 average_age(candidates)
+
+def language_screening (people, language) 
+
+    
+
+end
 
 
 
