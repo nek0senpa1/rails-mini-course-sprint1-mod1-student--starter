@@ -58,10 +58,20 @@ end
 average_age(candidates)
 
 def language_screening (people, language) 
+    peeps = []
 
-    
+    people.map {
+        |person|
+        if (person[:languages].include? language)
+            peeps.push(person[:first_name])
+        end
+    }
+
+    puts "The Peeps: #{peeps}"
 
 end
+
+language_screening(candidates, "Ruby")
 
 
 
